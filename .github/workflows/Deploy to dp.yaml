@@ -1,5 +1,8 @@
 name: Deploy to demonstration projects
-on: push
+on:
+  push:
+    branches:
+      - 'main'
 jobs:
   dispatch:
     runs-on: ubuntu-latest
