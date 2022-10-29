@@ -13,3 +13,4 @@ jobs:
           token: ${{ secrets.PWR_TOEKN }}
           heading_level: 2
           readme_path: ".//"
+          cwd: ".//"
