@@ -10,8 +10,6 @@ jobs:
     steps:
       - uses: maael/template-repository-usage-action@v1.2.0
         with: 
-          token: 
-            required: true
-            description: ${{ secrets.PWR_TOEKN }}
+          token: ${{ secrets.PWR_TOEKN }}
           heading_level: 2
           readme_path: ".//"
