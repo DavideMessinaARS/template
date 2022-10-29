@@ -4,27 +4,14 @@ on:
     - cron:  '0 0 * * *'
   workflow_dispatch: 
 jobs:
-  list:
-    name: Path lister
-    runs-on: ubuntu-latest
+  my_first_job:
+    name: Check template repository usage
+    runs-on: ubuntu-22.04
     steps:
-      - name: Set up Python 3.7
-        uses: actions/setup-python@v1
-        with:
-          python-version: "3.7"
-
-      - uses: actions/checkout@v1
-
-      - name: Fetch action
-        id: pl
-        uses: Rishabh510/Path-lister-action@master
-        with:
-          path: "./"
-          type: ".md"
-
-      - name: Output results
-        run: |
-          echo "Found ${{ steps.pl.outputs.path_count }} file(s) with this extension:"
-          for i in ${{ steps.pl.outputs.paths }}; do
-          echo $i
-          done
+      - uses: maael/template-repository-usage-action@v1.2.0
+        with: 
+          token: ${{ secrets.GITHUB_TOKEN }}
+          org: 'DavideMessinaARS'
+          repo: 'template'
+          heading_level: 2
+          readme_path: ".//README.md"
