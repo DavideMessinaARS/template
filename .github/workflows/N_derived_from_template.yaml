@@ -11,7 +11,5 @@ jobs:
       - uses: maael/template-repository-usage-action@v1.2.0
         with: 
           token: ${{ secrets.GITHUB_TOKEN }}
-          org: 'DavideMessinaARS'
-          repo: 'template'
           heading_level: 2
           readme_path: ".//"
