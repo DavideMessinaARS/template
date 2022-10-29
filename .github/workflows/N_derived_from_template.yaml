@@ -6,6 +6,7 @@ on:
 jobs:
   my_first_job:
     name: Check template repository usage
+    runs-on: ubuntu-22.04
     steps:
       - uses: maael/template-repository-usage-action@v1.2.0
         with: 
