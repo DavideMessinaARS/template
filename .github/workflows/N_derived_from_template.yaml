@@ -13,3 +13,5 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           org: 'DavideMessinaARS'
           repo: 'template'
+          heading_level: 2
+          readme_path: "./README.md"
