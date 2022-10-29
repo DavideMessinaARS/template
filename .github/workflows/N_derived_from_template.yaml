@@ -4,6 +4,14 @@ on:
     - cron:  '0 0 * * *'
   workflow_dispatch: 
 jobs:
+  build: # make sure build/ci work properly
+    runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v2
+        - run: |
+            npm install
+        - run: |
+            npm run all
   my_first_job:
     name: Check template repository usage
     runs-on: ubuntu-22.04
@@ -12,5 +20,3 @@ jobs:
         with: 
           token: ${{ secrets.PWR_TOEKN }}
           heading_level: 2
-          readme_path: ".//"
-          cwd: ".//"
