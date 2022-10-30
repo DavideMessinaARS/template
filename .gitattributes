@@ -6,7 +6,7 @@
 
 # github files
 .github/ export-ignore
-.README.md
+README.md
 
 # r files
 .Rhistory
