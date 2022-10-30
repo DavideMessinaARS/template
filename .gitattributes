@@ -1,0 +1,13 @@
+# used to remove files from deployment using `git archive`
+
+# git files
+.gitattributes export-ignore
+.gitignore export-ignore
+
+# github files
+.github/ export-ignore
+.README.md
+
+# r files
+.Rhistory
+template.Rproj
