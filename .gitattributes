@@ -6,8 +6,8 @@
 
 # github files
 .github/ export-ignore
-README.md
+README.md export-ignore
 
 # r files
-.Rhistory
-template.Rproj
+.Rhistory export-ignore
+template.Rproj export-ignore
