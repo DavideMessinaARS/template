@@ -20,10 +20,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Build project # This would actually build your project, using zip for an example artifact
         run: |
           echo test_${{ github.event.ref }}
+          git fetch origin main:main
           git archive main -o test_${{ github.event.ref }}.zip
 
       # Drafts your next Release notes as Pull Requests are merged into "master"
