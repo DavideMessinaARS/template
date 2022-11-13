@@ -33,11 +33,11 @@ jobs:
           # repository: owner/repo
       - name: Send request
         env:
-          TOKEN: ${{ steps.generate_token.outputs.token }}
+          TOKEN_APP: ${{ steps.generate_token.outputs.token }}
         run: |
           curl \
             -X POST \
             -H "Accept: application/vnd.github+json" \
-            -H "Authorization: Bearer ${{ TOKEN }}" \
+            -H "Authorization: Bearer ${{ TOKEN_APP }}" \
             https://api.github.com/repos/DavideMessinaARS/project-from-template/dispatches \
             -d '{"event_type":"deploy-to-dp","client_payload":{"unit":false,"integration":true}}'
