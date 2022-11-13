@@ -10,30 +10,30 @@ jobs:
     environment: test environment
     name: actions-template-sync
     steps:
-      - name: Generate token
-        id: generate_token
-        uses: tibdex/github-app-token@v1
-        with:
-          app_id: ${{ secrets.APP_ID }}
-
-          # Optional.
-          # github_api_url: https://api.example.com
-
-          # Optional.
-          # installation_id: 1337
-
-          # Optional.
-          # Using a YAML multiline string to avoid escaping the JSON quotes.
-          # permissions: >-
-          #   {"members": "read"}
-
-          private_key: ${{ secrets.PRIVATE_KEY }}
-
-          # Optional.
-          # repository: owner/repo
+      # - name: Generate token
+      #   id: generate_token
+      #   uses: tibdex/github-app-token@v1
+      #   with:
+      #     app_id: ${{ secrets.APP_ID }}
+      # 
+      #     # Optional.
+      #     # github_api_url: https://api.example.com
+      # 
+      #     # Optional.
+      #     # installation_id: 1337
+      # 
+      #     # Optional.
+      #     # Using a YAML multiline string to avoid escaping the JSON quotes.
+      #     # permissions: >-
+      #     #   {"members": "read"}
+      # 
+      #     private_key: ${{ secrets.PRIVATE_KEY }}
+      # 
+      #     # Optional.
+      #     # repository: owner/repo
       - name: Send request
-        env:
-          TOKEN: ${{ steps.generate_token.outputs.token }}
+        # env:
+        #   TOKEN: ${{ steps.generate_token.outputs.token }}
         run: |
           curl \
             -X POST \
