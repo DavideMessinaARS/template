@@ -18,8 +18,10 @@ jobs:
 
           # Optional.
           # github_api_url: https://api.example.com
+          
           # Optional.
           # installation_id: 1337
+          
           # Optional.
           # Using a YAML multiline string to avoid escaping the JSON quotes.
           # permissions: >-
