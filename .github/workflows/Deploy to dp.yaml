@@ -1,9 +1,9 @@
 name: Deploy to demonstration projects
 on:
   workflow_dispatch:
-  # push:
-  #   branches:
-  #     - 'main'
+  push:
+    branches:
+      - 'main'
 jobs:
   dispatch:
     runs-on: ubuntu-latest
